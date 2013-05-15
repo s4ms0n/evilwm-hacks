@@ -50,10 +50,10 @@ typedef struct {
 /* default settings */
 
 #define DEF_FONT        "variable"
-#define DEF_FG          "goldenrod"
-#define DEF_BG          "grey50"
+#define DEF_FG          "dark green"
+#define DEF_BG          "black"
 #define DEF_BW          1
-#define DEF_FC          "blue"
+#define DEF_FC          "green"
 #define SPACE           3
 #ifdef DEBIAN
 #define DEF_TERM        "x-terminal-emulator"
@@ -61,6 +61,7 @@ typedef struct {
 #define DEF_TERM        "xterm"
 #endif
 
+#define MY_BINDINGS TRUE
 /* readability stuff */
 
 #define VDESK_INVALID (0xfffffffd)
