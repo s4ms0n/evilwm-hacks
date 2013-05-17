@@ -47,13 +47,9 @@ static char *opt_altmask = NULL;
 unsigned int numlockmask = 0;
 /* changed values of grabmask1 and grabmask2 to make 
 ALT key the first default modifier */
-#ifdef MY_BINDINGS
 unsigned int grabmask1 = Mod1Mask;
 unsigned int grabmask2 = Mod1Mask;
-#else
-unsigned int grabmask1 = ControlMask|Mod1Mask;
-unsigned int grabmask2 = Mod1Mask;
-#endif
+
 unsigned int altmask = ShiftMask;
 static const char *const def_term[] = { DEF_TERM, NULL };
 char **opt_term = (char **)def_term;

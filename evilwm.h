@@ -61,7 +61,6 @@ typedef struct {
 #define DEF_TERM        "xterm"
 #endif
 
-#define MY_BINDINGS TRUE
 /* readability stuff */
 
 #define VDESK_INVALID (0xfffffffd)
