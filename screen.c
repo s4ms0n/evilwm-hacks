@@ -557,7 +557,8 @@ void grab_keys_for_screen(ScreenInfo *s) {
 		KEY_TOPLEFT, KEY_TOPRIGHT, KEY_BOTTOMLEFT, KEY_BOTTOMRIGHT,
 		KEY_LEFT, KEY_RIGHT, KEY_DOWN, KEY_UP,
 		KEY_LOWER, KEY_ALTLOWER, KEY_INFO, KEY_MAXVERT, KEY_MAX,
-		KEY_DOCK_TOGGLE
+		KEY_DOCK_TOGGLE,
+		KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8
 	};
 #define NUM_GRABS (int)(sizeof(keys_to_grab) / sizeof(KeySym))
 
@@ -577,13 +578,7 @@ void grab_keys_for_screen(ScreenInfo *s) {
 	for (i = 0; i < NUM_ALT_GRABS; i++) {
 		grab_keysym(s->root, grabmask1 | altmask, alt_keys_to_grab[i]);
 	}
-    /* if MY_BINDINGS defined, changes grabmask2 -> grabmask1 for 
-    the same modifier for next window as for screen change */
-#ifdef MY_BINDINGS
-	grab_keysym(s->root, grabmask1, KEY_NEXT);
-#else
 	grab_keysym(s->root, grabmask2, KEY_NEXT);
-#endif
 }
 
 /*

@@ -50,8 +50,30 @@ static void handle_key_event(XKeyEvent *e) {
 		case KEY_DOCK_TOGGLE:
 			set_docks_visible(current_screen, !current_screen->docks_visible);
 			break;
-		case XK_1: case XK_2: case XK_3: case XK_4:
-		case XK_5: case XK_6: case XK_7: case XK_8:
+        case KEY_1: case XK_1:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_1));
+			break;
+        case KEY_2: case XK_2:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_2));
+			break;
+        case KEY_3: case XK_3:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_3));
+			break;
+        case KEY_4: case XK_4:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_4));
+			break;
+        case KEY_5: case XK_5:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_5));
+			break;
+        case KEY_6: case XK_6:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_6));
+			break;
+        case KEY_7: case XK_7:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_7));
+			break;
+        case KEY_8: case XK_8:
+			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(XK_8));
+			break;
 		case XK_9: case XK_0:
 			switch_vdesk(current_screen, current_phy, KEY_TO_VDESK(key));
 			break;

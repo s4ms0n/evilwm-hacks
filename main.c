@@ -49,7 +49,7 @@ unsigned int numlockmask = 0;
 ALT key the first default modifier */
 #ifdef MY_BINDINGS
 unsigned int grabmask1 = Mod1Mask;
-unsigned int grabmask2 = ControlMask|Mod1Mask;
+unsigned int grabmask2 = Mod1Mask;
 #else
 unsigned int grabmask1 = ControlMask|Mod1Mask;
 unsigned int grabmask2 = Mod1Mask;
